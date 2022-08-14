@@ -2,8 +2,8 @@ pipeline {
     agent any
     stages {
         stage('Run Tests') {
-            sh 'chmod +x ./mvnw'
             steps {
+                sh 'chmod +x ./mvnw'
                 sh './mvnw clean test'
             }
         }
